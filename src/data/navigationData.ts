@@ -1,0 +1,107 @@
+import { NavMenuItem } from '../types/navigation';
+
+export const ACCOUNTIX_NAV_ITEMS: NavMenuItem[] = [
+  {
+    id: 'dashboard',
+    label: 'Dashboard',
+    route: '/dashboard',
+    hasDropdown: false,
+  },
+  {
+    id: 'banking',
+    label: 'Banking',
+    route: '/banking',
+    hasDropdown: true,
+    items: [
+      { id: 'bank-accounts', label: 'Bank Accounts', route: '/banking/bank-accounts' },
+      { id: 'bank-deposit', label: 'Bank Deposit', route: '/banking/bank-deposit' },
+      { id: 'bank-withdrawal', label: 'Bank Withdrawal', route: '/banking/bank-withdrawal' },
+      { id: 'bank-transfer', label: 'Bank Transfer', route: '/banking/bank-transfer' },
+      { id: 'bank-payment', label: 'Bank Payment', route: '/banking/bank-payment' },
+      { id: 'bank-receiving', label: 'Bank Receiving', route: '/banking/bank-receiving' },
+      { id: 'bank-reconciliation', label: 'Bank Reconciliation', route: '/banking/bank-reconciliation' },
+      { id: 'bank-ledger', label: 'Bank Ledger', route: '/banking/bank-ledger' },
+    ],
+  },
+  {
+    id: 'expenses',
+    label: 'Expenses',
+    route: '/expenses',
+    hasDropdown: true,
+    items: [
+      { id: 'expenses-voucher', label: 'Expense Voucher', route: '/transactions/other/expenses' },
+      { id: 'direct-expenses', label: 'Direct Expenses', route: '/expenses/direct' },
+      { id: 'indirect-expenses', label: 'Indirect Expenses', route: '/expenses/indirect' },
+      { id: 'expense-report', label: 'Expense Report', route: '/reports/expenses' },
+    ],
+  },
+  {
+    id: 'sales',
+    label: 'Sales',
+    route: '/transactions/sales/sale-invoice',
+    hasDropdown: true,
+    items: [
+      { id: 'sale-invoice', label: 'Sale Invoice', route: '/transactions/sales/sale-invoice' },
+      { id: 'cash-sale', label: 'Cash Sale', route: '/transactions/sales/cash-sale' },
+      { id: 'credit-sale', label: 'Credit Sale', route: '/transactions/sales/credit-sale' },
+      { id: 'all-sales-report', label: 'All Sales Report', route: '/reports/sales-reports' },
+      { id: 'cash-sale-report', label: 'Cash Sale Report', route: '/reports/sales/cash-sale-report' },
+      { id: 'credit-sale-report', label: 'Credit Sale Report', route: '/reports/sales/credit-sale-report' },
+      { id: 'sales-return', label: 'Sales Return', route: '/transactions/sales/sales-return' },
+    ],
+  },
+  {
+    id: 'reports',
+    label: 'Reports',
+    route: '/reports',
+    hasDropdown: true,
+    items: [
+      { id: 'all-sales-report-menu', label: 'All Sales Report', route: '/reports/sales-reports' },
+      { id: 'cash-sale-report-menu', label: 'Cash Sale Report', route: '/reports/sales/cash-sale-report' },
+      { id: 'credit-sale-report-menu', label: 'Credit Sale Report', route: '/reports/sales/credit-sale-report' },
+      { id: 'day-book-report', label: 'Day Book', route: '/reports/day-book' },
+      { id: 'customer-ledger-report', label: 'Customer Ledger', route: '/accounts/customer-ledger' },
+      { id: 'cash-book-report', label: 'Cash Book', route: '/reports/cash-book' },
+      { id: 'stock-reports', label: 'Stock Reports', route: '/reports/stock-reports' },
+      { id: 'profit-and-loss', label: 'Profit & Loss', route: '/reports/profit-and-loss' },
+      { id: 'balance-sheet', label: 'Balance Sheet', route: '/reports/balance-sheet' },
+    ],
+  },
+  {
+    id: 'stock',
+    label: 'Stock',
+    route: '/stock',
+    hasDropdown: true,
+    items: [
+      { id: 'products', label: 'Products', route: '/stock/products' },
+      { id: 'stock-in', label: 'Stock In', route: '/stock/stock-in' },
+      { id: 'stock-out', label: 'Stock Out', route: '/stock/stock-out' },
+      { id: 'stock-adjustment', label: 'Stock Adjustment', route: '/stock/stock-adjustment' },
+      { id: 'stock-ledger', label: 'Stock Ledger', route: '/stock/stock-ledger' },
+      { id: 'outstanding-stock', label: 'Outstanding Stock', route: '/stock/outstanding-stock' },
+    ],
+  },
+  {
+    id: 'settings',
+    label: 'Settings',
+    route: '/settings',
+    hasDropdown: true,
+    items: [
+      { id: 'business-company', label: 'Business / Company', route: '/settings/business-company' },
+      { id: 'financial-year', label: 'Financial Year', route: '/settings/financial-year' },
+      { id: 'users-permissions', label: 'Users & Permissions', route: '/settings/users-permissions' },
+      { id: 'invoice-settings', label: 'Invoice Settings', route: '/settings/invoice-settings' },
+      { id: 'tax-settings', label: 'Tax Settings', route: '/settings/tax-settings' },
+      { id: 'backup-restore', label: 'Backup & Restore', route: '/settings/backup-restore' },
+    ],
+  },
+  {
+    id: 'logout',
+    label: 'Logout',
+    route: '/logout',
+    hasDropdown: false,
+    isSpecialAction: true,
+  },
+];
+
+export const LOGOUT_ITEM: NavMenuItem = ACCOUNTIX_NAV_ITEMS[ACCOUNTIX_NAV_ITEMS.length - 1];

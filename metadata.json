@@ -1,0 +1,6 @@
+{
+  "name": "ACCOUNTIX - Accounting & Business Management Software",
+  "description": "Professional WordPress frontend navigation and dropdown menu structure for ACCOUNTIX accounting and business management software.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
